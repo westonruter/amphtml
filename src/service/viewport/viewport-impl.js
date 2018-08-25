@@ -233,6 +233,8 @@ export class Viewport {
       this.visible_ = visible;
       if (visible) {
         this.binding_.connect();
+        this.scrollTop_ = null;
+        this.scrollLeft_ = null;
         if (this.size_) {
           // If the size has already been intialized, check it again in case
           // the size has changed between `disconnect` and `connect`.
